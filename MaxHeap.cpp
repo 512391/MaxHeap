@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 #include"MaxHeap.h"
 
 using namespace std;
@@ -41,7 +42,7 @@ int Heap::getParent(int index)
       return -1;
     }
 
-  return (index-1)/2;
+  return ceil(double (index-1)/2);
 }
 
 int Heap::getGreatestChild(int index)
@@ -72,7 +73,7 @@ if(Heap::heap[childOneIndex] == -1 && Heap::heap[childTwoIndex] == -1)
 void Heap::checkParentToSwap(int index)
 {
   int parent = Heap::getParent(index);
-
+ 
   if(parent == -1)
     {
       return;
@@ -91,7 +92,7 @@ void Heap::checkParentToSwap(int index)
 void Heap::checkChildToSwap(int index)
 {
   int child = Heap::getGreatestChild(index);
-
+  
   if(child == -1)
     {
       return;
@@ -109,12 +110,19 @@ void Heap::checkChildToSwap(int index)
 
 int Heap::getRoot()
 {
+  if(Heap::heap[1] == -1)
+    {
+      return -1;
+    }
+  
   int output = Heap::heap[1];
 
-  Heap::heap[1] = Heap::heap[bottomIndex-1];
-  Heap::heap[bottomIndex-1] = -1;
+  Heap::heap[1] = Heap::heap[Heap::bottomIndex-1];
+  Heap::heap[Heap::bottomIndex-1] = -1;
 
   checkChildToSwap(1);
+
+  Heap::bottomIndex--;
   
   return output;
 }

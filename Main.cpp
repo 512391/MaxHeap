@@ -19,7 +19,7 @@ int main()
 	}
       else
 	{
-	  cout << heap->getRoot() << endl;
+      	  cout << heap->getRoot() << endl;
 	}
       
       cout<< "what do you want to add \n";
