@@ -12,6 +12,8 @@ namespace Heaps
       int getGreatestChild(int index);
       void checkParentToSwap(int index);
       void checkChildToSwap(int index);
+      void printNode(int index, int depth);
+      
       public:
       Heap(int size);
       void add(int i);
