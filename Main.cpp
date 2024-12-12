@@ -6,9 +6,20 @@ using namespace Heaps;
 
 int main()
 {
+  ifstream firstNamesFile("Input.txt");
+
+  int *nums = new int[1000];
+
+  char 
+  
+  while()
+    {
+      
+    }
+  
   int number = 0;
 
-  Heap* heap = new Heap(100);
+  Heap* heap = new Heap(1000);
   
   while(number != -1)
     {
