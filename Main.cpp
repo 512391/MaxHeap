@@ -2,7 +2,12 @@
 #include<cmath>
 #include<fstream>
 #include"MaxHeap.h"
-
+/*
+Author Jay Williamson
+date 12/19/2024
+this class creates a heap and allows you to add display and take from it
+it also allows u to give it a file to add to the heap
+	*/
 using namespace std;
 using namespace Heaps;
 
