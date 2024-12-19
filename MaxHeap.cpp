@@ -1,7 +1,11 @@
 #include<iostream>
 #include<cmath>
 #include"MaxHeap.h"
-
+/*
+Author Jay Williamson
+Date 12/19/2024
+This class implements the heap.h which is a data structure which is a tree that hold bigger numbers further up
+  */
 using namespace std;
 using namespace Heaps;
 
