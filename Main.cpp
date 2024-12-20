@@ -47,7 +47,7 @@ int main()
 	    }
 	//this keeps it from running it with the random character on top of the new heap
 	  firstThrough = false;
-            cout << "What do you want to add or press -3 or press -2 to get root or press -1 to exit\n";
+            cout << "What do you want to add or to see the tree press -3 or press -2 to get root or press -1 to exit\n";
             cin >> number;
         }
 
@@ -128,7 +128,6 @@ int main()
             }//gets the root and displays it as well as removing it
             else if(number == -2)
             {
-	      cout << "got root" << endl;
                 cout << heap->getRoot() << endl;
             }
 
