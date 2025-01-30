@@ -31,6 +31,8 @@ namespace Heaps
       public:
       //this is the constructor that takes a max size
       Heap(int size);
+      //removes root until nothin more
+      void deleteAll();
       //this is the function that adds something to the heap
       void add(int i);
       //this get the root and removes it and reorganizes the tree

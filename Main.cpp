@@ -31,7 +31,7 @@ int main()
 	  if(!firstThrough)
 	    {
 		//if it is not a number which requires special action it just adds it to the heap
-                if (number != -2 && number != -3) 
+                if (number != -2 && number != -3 && number != -4) 
                 {
                     heap->add(number);
                     heap->display();
@@ -44,10 +44,14 @@ int main()
 		{
 		  heap->display();
 		}
+		else if(number == -4)
+		{
+		    heap->deleteAll();
+		}
 	    }
 	//this keeps it from running it with the random character on top of the new heap
 	  firstThrough = false;
-            cout << "What do you want to add or to see the tree press -3 or press -2 to get root or press -1 to exit\n";
+            cout << "Input what do you want to add|| or remove all with -4 to see the tree press -3 or press -2 to get root or press -1 to exit\n";
             cin >> number;
         }
 
@@ -130,9 +134,14 @@ int main()
             {
                 cout << heap->getRoot() << endl;
             }
+	    else if(number == -4)
+	      {
+		cout << "about to delete all\n";
+		heap->deleteAll();
+	      }
 
 	//gets the next input
-            cout << "Press -3 to see the tree or -2 to get the root or -1 to exit\n";
+            cout << "Input what do you want to add, or remove all with -4 to see the tree press -3 or press -2 to get root or press -1 to exit\n";
             cin >> number;
         }
     }

@@ -22,6 +22,20 @@ Heap::Heap(int size)
     }
 }
 
+void Heap::deleteAll()
+{
+  int i = Heap::getRoot();
+
+  //keeps getting root until emptyx
+  while(i != -1)
+    {
+      cout << i << ", ";
+      i = Heap::getRoot();
+    }
+  
+  cout << endl;
+}
+
 //adds something to the heap
 void Heap::add(int i)
 {
@@ -137,7 +151,7 @@ int Heap::getRoot()
     {
       return -1;
     }
-
+  
   //gets the output to return
   int output = Heap::heap[1];
 
@@ -145,6 +159,11 @@ int Heap::getRoot()
   Heap::heap[1] = Heap::heap[Heap::bottomIndex-1];
   Heap::heap[Heap::bottomIndex-1] = -1;
 
+  if(Heap::heap[1] == -1)
+    {
+      return output;
+    }
+  
   //moves the top down
   checkChildToSwap(1);
 
